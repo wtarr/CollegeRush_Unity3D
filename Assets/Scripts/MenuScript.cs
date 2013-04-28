@@ -1,13 +1,11 @@
 using UnityEngine;
 using System.Collections;
 
-[RequireComponent (typeof (AudioSource))]
 public class MenuScript : MonoBehaviour {
 
     public string levelToLoad;
     public Texture2D normalTexture;
-    public Texture2D rollOverTexture;
-    public AudioClip beep;
+    public Texture2D rollOverTexture;    
 
     public bool quitButton = false;
 
@@ -31,10 +29,8 @@ public class MenuScript : MonoBehaviour {
         guiTexture.texture = normalTexture;     
     }
 
-    IEnumerator OnMouseUp()
+    void OnMouseUp()
     {
-        audio.PlayOneShot(beep);
-        yield return new WaitForSeconds(0.35f);
         if (quitButton)
         {
             Application.Quit();
