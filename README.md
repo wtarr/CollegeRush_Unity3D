@@ -1,6 +1,8 @@
 CollegeRush_Unity3D
 ===================
 
+Created for a college game design module
+
 ============
 Controls
 ============
